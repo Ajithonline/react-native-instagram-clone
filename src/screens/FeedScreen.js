@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View,StyleSheet,ScrollView,Image } from 'react-native'
 import { colors } from '../config/Colors'
 import Feed from "../components/Feed";
-
+import Stories from "../components/Stories";
 export class FeedScreen extends Component {
     render() {
         return (
@@ -16,7 +16,9 @@ export class FeedScreen extends Component {
                        <Image style={styles.icon} source={require('../assets/images/message.jpg')} />
                       </View>
                    </View>
-                     
+                   <View style={styles.storiesWrapper}>
+                       <Stories/>
+                   </View>      
 
 
 
@@ -54,7 +56,7 @@ export const styles=StyleSheet.create({
     footer:{
      display:'flex',
      flexDirection:'row',
-      bottom:50,
+     bottom:0,
      justifyContent:'space-between',
      padding:10,
      borderTopColor:colors.gray1,
@@ -75,5 +77,10 @@ export const styles=StyleSheet.create({
     headerRightWrapper:{
         display:'flex',
         flexDirection:'row'
+    },
+    storiesWrapper:{
+        backgroundColor:colors.gray1,
+      borderBottomColor:colors.gray1,
+      borderBottomWidth:1
     }
 })
