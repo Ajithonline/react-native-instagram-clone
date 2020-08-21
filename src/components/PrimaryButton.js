@@ -35,7 +35,7 @@ export default PrimaryButton
 export const styles=StyleSheet.create({
     container:{
       width:'100%',
-      padding:15
+   
     },
     button:{
         backgroundColor:colors.primary,

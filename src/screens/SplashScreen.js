@@ -10,8 +10,8 @@ export class SplashScreen extends Component {
                 </View>
                 <View style={styles.logoContainer}>
                     <Text style={styles.from}>from</Text>
-                    <View style={styles.logoTextWrapper}>
-                    <Image style={styles.logo} source={require('../assets/images/facebookTextLogo.png')}/>
+                     <View style={styles.logoTextWrapper}>
+                     <Image  style={styles.logo} source={require('../assets/images/facebookTextLogo.png')}/>
                     </View>
                 </View>
             </View>
@@ -35,13 +35,14 @@ export const styles=StyleSheet.create({
     logoContainer:{
         display:'flex',
         flex:1,
+        width:'100%',
         justifyContent:'flex-end',
-        alignItems:'center',
+        alignSelf:'center',
         marginBottom:30
     },
     logoTextWrapper:{
-        width:'35%',
-        height:20,
+        width:'100%',
+        height:'10%',
     },
     icon:{
         width:100,
@@ -49,10 +50,14 @@ export const styles=StyleSheet.create({
     },
     logo:{
         flex:1,
-        width:undefined
+        alignSelf:'center',
+        height:'100%',
+        width:'80%'
     },
     from:{
         color:'gray',
-        marginBottom:15
+        marginBottom:15,
+        textAlign:'center'
+       
     }
 })

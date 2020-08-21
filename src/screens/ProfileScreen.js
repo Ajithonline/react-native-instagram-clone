@@ -166,13 +166,13 @@ export const styles=StyleSheet.create({
     
   },
   instaImageBorder:{
-      width:150,
-      height:150
+      width:130,
+      height:130
   },
   userImage:{
       position:'absolute',
-      width:135,
-      height:135,
+      width:115,
+      height:115,
       borderRadius:70,
       margin:13
   },

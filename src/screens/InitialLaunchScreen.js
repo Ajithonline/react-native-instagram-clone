@@ -5,6 +5,7 @@ import PrimaryButton from "../components/PrimaryButton";
 import { colors } from '../config/Colors';
 import SearchBox from '../components/SearchBox';
 
+
 const DATA=[
     {id:"1",
     title:'Language 1',
@@ -53,8 +54,12 @@ export class InitialLaunchScreen extends Component {
                <View  style={styles.buttonsContainer}>
                  
                   <Image style={styles.instaLogo} source={require('../assets/images/instagramLogo.png')} />
-                  <PrimaryButton buttonBg={colors.primary} text={colors.secondary} label={'Create New Account'} />
-                  <PrimaryButton buttonBg={colors.secondary} text={colors.primary} label={'Login'} />
+                  <View style={styles.ButtonItemContainer}>
+                    <PrimaryButton buttonBg={colors.primary} text={colors.secondary} label={'Create New Account'} />
+                  </View>
+                  <View  style={styles.ButtonItemContainer}>
+                    <PrimaryButton buttonBg={colors.secondary} text={colors.primary} label={'Login'} />
+                  </View>
                  
                </View>
                <View  style={styles.fbLogoContainer}>
@@ -110,7 +115,9 @@ export const styles=StyleSheet.create({
         display:'flex',
         flex:1 ,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+      
+        padding:15
     },
     fbLogoContainer:{
         display:'flex',
@@ -173,5 +180,9 @@ color:colors.gray,
     },
     langTitle:{
         fontSize:20
+    },
+    ButtonItemContainer:{
+      marginBottom:10,
+      width:'100%'
     }
 })

@@ -22,11 +22,12 @@ import SignUpScreen1 from "./src/screens/SignUpScreen1";
 import SignUpScreen2 from "./src/screens/SignUpScreen2";
 import FeedScreen from "./src/screens/FeedScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
+import LoginScreen from "./src/screens/LoginScreen";
 
 const App: () => React$Node = () => {
   return (<View style={styles.container}>
-   <ProfileScreen/>
-    </View>
+             <LoginScreen/>
+          </View>
   );
 };
 
