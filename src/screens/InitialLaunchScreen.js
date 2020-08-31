@@ -168,7 +168,8 @@ color:colors.gray,
         backgroundColor:colors.gray1
     },
     searchBoxWrapper:{
-
+     display:'flex',
+     marginBottom:20
     },
     languageWrapper:{
        marginLeft:15,

@@ -13,9 +13,9 @@ export class SearchBox extends Component {
         this.setState({searchText:text})
     }
     render() {
-        return (
-            <View>
-                <View style={styles.container}>
+        return (<View style={styles.container}>
+          
+                <View style={styles.contentContainer}>
                  <View style={styles.iconWrapper}>
                     <Icon name='search' style={styles.icon} size={22} color={colors.gray}/>
                  </View>
@@ -25,8 +25,8 @@ export class SearchBox extends Component {
                  </View>
 
                 </View>
-               
-            </View>
+               </View>
+            
         )
     }
 }
@@ -36,8 +36,13 @@ export default SearchBox
 
 export const styles=StyleSheet.create({
     container:{
-        flexDirection:'row',
+        display:'flex',
+        flex:1,
         padding:10
+    },
+    contentContainer:{
+      display:'flex',
+      flexDirection:'row'
     },
     iconWrapper:{
         display:'flex',

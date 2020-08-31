@@ -23,10 +23,12 @@ import SignUpScreen2 from "./src/screens/SignUpScreen2";
 import FeedScreen from "./src/screens/FeedScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import LoginScreen from "./src/screens/LoginScreen";
-
+import SearchHomeScreen from "./src/screens/SearchHomeScreen";
+import SearchScreen from "./src/screens/SearchScreen";
+import GalleryScreen from "./src/screens/GalleryScreen";
 const App: () => React$Node = () => {
   return (<View style={styles.container}>
-             <LoginScreen/>
+           <GalleryScreen/>
           </View>
   );
 };

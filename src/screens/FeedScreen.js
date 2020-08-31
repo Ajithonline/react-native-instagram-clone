@@ -26,11 +26,11 @@ export class FeedScreen extends Component {
                        <Feed/>
                    </ScrollView>    
                    <View  style={styles.footer}>
-                       <Image style={styles.icon} source={require('../assets/images/home.png')} />
-                       <Image style={styles.icon} source={require('../assets/images/search.jpg')} />
-                       <Image style={styles.icon} source={require('../assets/images/plus.png')} />
-                       <Image style={styles.icon} source={require('../assets/images/heart.png')} />
-                       <Image style={styles.icon} source={require('../assets/images/profile.png')} />
+                   <Icon color={colors.black} size={25} name="home"/>
+                      <Icon color={colors.gray} size={25} name="search"/>
+                      <Icon color={colors.gray} size={25} name="plus-square"/>
+                      <Icon color={colors.gray} size={25} name="heart"/>
+
                    </View>
               
             </View>
