@@ -27,10 +27,10 @@ import SearchHomeScreen from "./src/screens/SearchHomeScreen";
 import SearchScreen from "./src/screens/SearchScreen";
 import GalleryScreen from "./src/screens/GalleryScreen";
 import PhotoCaptureScreen from "./src/screens/PhotoCaptureScreen";
-
+import ApplyEffectScreen from "./src/screens/ApplyEffectScreen";
 const App: () => React$Node = () => {
   return (<View style={styles.container}>
-           <PhotoCaptureScreen/>
+           <ApplyEffectScreen/>
           </View>
   );
 };
