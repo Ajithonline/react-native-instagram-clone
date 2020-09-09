@@ -1,22 +1,28 @@
 import React, {PureComponent} from 'react';
-import {Text, View, StyleSheet,Image,TouchableOpacity,Dimensions} from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import {colors} from '../config/Colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { RNCamera } from 'react-native-camera';
+import {RNCamera} from 'react-native-camera';
 
-const width=Dimensions.get('window').width
+const width = Dimensions.get('window').width;
 
-const height=Dimensions.get('window').height
+const height = Dimensions.get('window').height;
 
 export class PhotoCaptureScreen extends PureComponent {
-
-    takePicture = async () => {
-        if (this.camera) {
-          const options = { quality: 0.5, base64: true };
-          const data = await this.camera.takePictureAsync(options);
-          console.log(data.uri);
-        }
-      };
+  takePicture = async () => {
+    if (this.camera) {
+      const options = {quality: 0.5, base64: true};
+      const data = await this.camera.takePictureAsync(options);
+      console.log(data.uri);
+    }
+  };
 
   render() {
     return (
@@ -32,34 +38,39 @@ export class PhotoCaptureScreen extends PureComponent {
           </View>
         </View>
         <View style={styles.previewWrapper}>
-        <RNCamera
-          ratio={'2:2'}
-          ref={ref => {
-            this.camera = ref;
-          }}
-          style={styles.preview}
-          type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
-          androidCameraPermissionOptions={{
-            title: 'Permission to use camera',
-            message: 'We need your permission to use your camera',
-            buttonPositive: 'Ok',
-            buttonNegative: 'Cancel',
-          }}
-          androidRecordAudioPermissionOptions={{
-            title: 'Permission to use audio recording',
-            message: 'We need your permission to use your audio',
-            buttonPositive: 'Ok',
-            buttonNegative: 'Cancel',
-          }}
-          onGoogleVisionBarcodesDetected={({ barcodes }) => {
-            console.log(barcodes);
-          }}
-        />
+          <RNCamera
+            ratio={'2:2'}
+            ref={ref => {
+              this.camera = ref;
+            }}
+            style={styles.preview}
+            type={RNCamera.Constants.Type.back}
+            flashMode={RNCamera.Constants.FlashMode.on}
+            androidCameraPermissionOptions={{
+              title: 'Permission to use camera',
+              message: 'We need your permission to use your camera',
+              buttonPositive: 'Ok',
+              buttonNegative: 'Cancel',
+            }}
+            androidRecordAudioPermissionOptions={{
+              title: 'Permission to use audio recording',
+              message: 'We need your permission to use your audio',
+              buttonPositive: 'Ok',
+              buttonNegative: 'Cancel',
+            }}
+            onGoogleVisionBarcodesDetected={({barcodes}) => {
+              console.log(barcodes);
+            }}
+          />
         </View>
         <View style={styles.buttonWrapper}>
-        <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-           <Image style={styles.captureButton}  source={require('../assets/images/takePhoto.png')} />
+          <TouchableOpacity
+            onPress={this.takePicture.bind(this)}
+            style={styles.capture}>
+            <Image
+              style={styles.captureButton}
+              source={require('../assets/images/takePhoto.png')}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.footerWrapper}>
@@ -91,13 +102,13 @@ export const styles = StyleSheet.create({
     padding: 10,
   },
   previewWrapper: {
-      display:'flex',
-     },
+    display: 'flex',
+  },
   buttonWrapper: {
-      display:'flex',
-      flex:1,
-      justifyContent:'center',
-      alignItems:'center'
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   footerWrapper: {
     display: 'flex',
@@ -141,10 +152,10 @@ export const styles = StyleSheet.create({
     color: colors.black,
   },
   preview: {
-    height:width,
+    height: width,
   },
-  captureButton:{
-      width:width/3,
-      height:width/3
-  }
+  captureButton: {
+    width: width / 3,
+    height: width / 3,
+  },
 });

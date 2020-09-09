@@ -16,30 +16,32 @@ import {
   StatusBar,
 } from 'react-native';
 
-import SplashScreen from "./src/screens/SplashScreen";
-import InitialLaunchScreen from "./src/screens/InitialLaunchScreen";
-import SignUpScreen1 from "./src/screens/SignUpScreen1";
-import SignUpScreen2 from "./src/screens/SignUpScreen2";
-import FeedScreen from "./src/screens/FeedScreen";
-import ProfileScreen from "./src/screens/ProfileScreen";
-import LoginScreen from "./src/screens/LoginScreen";
-import SearchHomeScreen from "./src/screens/SearchHomeScreen";
-import SearchScreen from "./src/screens/SearchScreen";
-import GalleryScreen from "./src/screens/GalleryScreen";
-import PhotoCaptureScreen from "./src/screens/PhotoCaptureScreen";
-import ApplyEffectScreen from "./src/screens/ApplyEffectScreen";
+import SplashScreen from './src/screens/SplashScreen';
+import InitialLaunchScreen from './src/screens/InitialLaunchScreen';
+import SignUpScreen1 from './src/screens/SignUpScreen1';
+import SignUpScreen2 from './src/screens/SignUpScreen2';
+import FeedScreen from './src/screens/FeedScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SearchHomeScreen from './src/screens/SearchHomeScreen';
+import SearchScreen from './src/screens/SearchScreen';
+import GalleryScreen from './src/screens/GalleryScreen';
+import PhotoCaptureScreen from './src/screens/PhotoCaptureScreen';
+import ApplyEffectScreen from './src/screens/ApplyEffectScreen';
+import ActivityNotificationScreen from './src/screens/ActivityNotificationScreen';
 const App: () => React$Node = () => {
-  return (<View style={styles.container}>
-           <ApplyEffectScreen/>
-          </View>
+  return (
+    <View style={styles.container}>
+      <ActivityNotificationScreen />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-container:{
-  display:'flex',
-  flex:1
-}
+  container: {
+    display: 'flex',
+    flex: 1,
+  },
 });
 
 export default App;

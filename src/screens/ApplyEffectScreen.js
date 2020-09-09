@@ -41,7 +41,7 @@ export class ApplyEffectScreen extends Component {
       <View style={styles.container}>
         <View style={styles.heaerWrapper}>
           <Icon size={25} name={'arrow-left'} />
-         <Image
+          <Image
             style={styles.imageIcon}
             source={require('../assets/images/sunshine.png')}
           />
